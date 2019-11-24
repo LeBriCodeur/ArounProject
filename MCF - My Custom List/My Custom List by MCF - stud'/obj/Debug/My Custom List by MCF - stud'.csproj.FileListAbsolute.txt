@@ -1,0 +1,10 @@
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\bin\Debug\My Custom List by MCF - stud'.exe.config
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\bin\Debug\My Custom List by MCF - stud'.exe
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\bin\Debug\My Custom List by MCF - stud'.pdb
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My Custom List by MCF - stud'.csprojAssemblyReference.cache
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My_Custom_List_by_MCF___stud_.Form1.resources
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My_Custom_List_by_MCF___stud_.Properties.Resources.resources
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My Custom List by MCF - stud'.csproj.GenerateResource.cache
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My Custom List by MCF - stud'.csproj.CoreCompileInputs.cache
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My Custom List by MCF - stud'.exe
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Debug\My Custom List by MCF - stud'.pdb
