@@ -15,7 +15,7 @@ namespace My_Custom_List_by_MCF___stud_
     {
         private const string NAME_APP = "My Custom List";
         private const string NAME_FOLDER_SAVE = "MCF_Stud";
-        private const string NAME_FIRST_FOLDER = "Général";
+        private const string NAME_FIRST_FOLDER = "_Apps";
         private DialogResult myReturn;
         private static string pathAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string pathSave = Path.Combine(pathAppData, NAME_FOLDER_SAVE);
@@ -135,7 +135,9 @@ namespace My_Custom_List_by_MCF___stud_
                     var pathGen = Path.Combine(pathSave, NAME_FIRST_FOLDER);
                     if (! Directory.Exists(pathGen))
                         Directory.CreateDirectory(pathGen); //-- Création du premier dossier catégorie
-                    
+                        pathGen = Path.Combine(pathGen, "Animes liste.txt");
+                        File.WriteAllText(pathGen, Properties.Settings.Default.AnimeList);
+                        
                     logs(WELCOME_MSG); 
                 } else { quit(); }
             }
@@ -233,7 +235,7 @@ namespace My_Custom_List_by_MCF___stud_
                     var myPath = Path.Combine(pathSave, folderName);
                     myPath = Path.Combine(myPath, string.Format("{0}.txt", editNameList.Text));
                     File.WriteAllText(myPath, "");
-                    loadList(2);
+                    loadList(1, Path.Combine(pathSave, folderName));
                     logs(string.Format("Nouvelle liste créée :\n{0}", editNameList.Text));
                 }
             }
@@ -266,20 +268,29 @@ namespace My_Custom_List_by_MCF___stud_
             return File.ReadLines(p_path).Count();
         }
         //-- Write in the list selected
-        private void WriteInFile(string p_str)
+        private void WriteInFile(string p_str, bool p_pushActiv = true)
         {
             if (itemSelected(0)) return;
             if (itemSelected(1)) return;
             var myPath = Path.Combine(pathSave, listCatego.Text);
             myPath = Path.Combine(myPath, string.Format("{0}.txt", listMyList.Text));
-            var myText = File.ReadAllText(myPath);
+            string myText;
+            if (p_pushActiv)
+            {
+                myText = File.ReadAllText(myPath);
+            }
+            else
+            {
+                myText = string.Empty;
+            }
+
             if (myText == string.Empty)
             {
                 myText = string.Format("{0}", p_str);
             }
             else
             {
-                myText = string.Format("{0}\n{1}", myText, p_str);
+                myText = string.Format("{0}\n{1}", myText.Trim(), p_str);
             }
             File.WriteAllText(myPath, myText);
             counter.Maximum = countLine(myPath);
@@ -301,16 +312,19 @@ namespace My_Custom_List_by_MCF___stud_
                 }
                 else
                 {
-                    myStr = string.Format("{0}\n{1}", myStr, item.Trim());
+                    myStr = string.Format("{0}\n{1}", myStr.Trim(), item.Trim());
                 }
             }
             WriteInFile(myStr);
+            showList();
             //logs(myStr);
         }
    
         //-- fnc Tirage
         private void selectInList()
         {
+            if (itemSelected(0)) return;
+            if (itemSelected(1)) return;
             var myPath = Path.Combine(pathSave, listCatego.SelectedItem.ToString());
             myPath = Path.Combine(myPath, string.Format("{0}.txt", listMyList.SelectedItem.ToString()));
             var containFile = File.ReadAllLines(myPath);
@@ -388,14 +402,19 @@ namespace My_Custom_List_by_MCF___stud_
         {
             txtShowList.Text = p_str;
         }
-
-        private void ListMyList_SelectedIndexChanged(object sender, EventArgs e)
+        private void showList()
         {
+            if (itemSelected(0)) return;
+            if (itemSelected(1)) return;
             var myPath = Path.Combine(pathSave, listCatego.SelectedItem.ToString());
             myPath = Path.Combine(myPath, string.Format("{0}.txt", listMyList.SelectedItem.ToString()));
             if (!File.Exists(myPath)) return;
             counter.Maximum = countLine(myPath);
             preview(File.ReadAllText(myPath));
+        }
+        private void ListMyList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showList();
         }
 
         private void CheckAllCatego_CheckedChanged(object sender, EventArgs e)
@@ -408,6 +427,73 @@ namespace My_Custom_List_by_MCF___stud_
             {
                 counter.Enabled = true;
             }
+        }
+
+        private void CheckEditList_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEditList.Checked)
+            {
+                BtnSaveEdit.Enabled = true;
+                txtShowList.ReadOnly = false;
+            }
+            else
+            {
+                BtnSaveEdit.Enabled = false;
+                txtShowList.ReadOnly = true;
+            }
+        }
+
+        private void BtnSaveEdit_Click(object sender, EventArgs e)
+        {
+            if (!checkEditList.Checked) return;
+            WriteInFile(txtShowList.Text, false);
+            logs("Enregistrement effectué avec succès !");
+            checkEditList.Checked = false;
+            BtnSaveEdit.Enabled = false;
+            txtShowList.ReadOnly = true;
+        }
+
+        private void rename(int getListbox)
+        {
+            string myPath = string.Empty;
+            string myPath2 = string.Empty;
+            switch (getListbox)
+            {
+                case 0:
+                    if (itemSelected(0)) return;
+                    myPath = Path.Combine(pathSave, listCatego.SelectedItem.ToString());
+                    if (!Directory.Exists(pathSave)) return;
+                    myPath2 = Path.Combine(pathSave, editFolderName.Text);
+                    Directory.Move(myPath, myPath2);
+                    loadList(0);
+                    logs("Catégorie renommée avec succès !");
+                    break;
+
+                case 1:
+                    if (itemSelected(0)) return;
+                    if (itemSelected(1)) return;
+                    myPath = Path.Combine(pathSave, listCatego.SelectedItem.ToString());
+                    myPath2 = Path.Combine(myPath, string.Format("{0}.txt", editNameList.Text));
+                    myPath = Path.Combine(myPath, string.Format("{0}.txt", listMyList.SelectedItem.ToString()));
+                    File.Move(myPath, myPath2);
+                    loadList(1, Path.Combine(pathSave, listCatego.SelectedItem.ToString()));
+                    logs("Liste renommée avec succès !");
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        //-- Btn rename catego
+        private void BtnReNameCatego_Click(object sender, EventArgs e)
+        {
+            rename(0);
+        }
+
+        //-- Btn rename list
+        private void BtnReNameList_Click(object sender, EventArgs e)
+        {
+            rename(1);
         }
     }
 }

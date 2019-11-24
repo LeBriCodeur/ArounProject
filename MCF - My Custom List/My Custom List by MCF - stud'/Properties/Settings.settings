@@ -1,7 +1,39 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My_Custom_List_by_MCF___stud_.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AnimeList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Liste faite par une vieille de 8ans.
+Made in abyss'
+Gurren Lagann
+Shen Gate
+My hero academia
+Evangelion
+Plandre - Space Dandy
+Haikyu
+Psycho-pass
+Death Parade
+Gungrave
+Rainbow
+Blue Exorcist
+Full Metal Alchimist : Brotherhood
+Hunter x Hunter (2011)
+hellsing ultimate
+Barakamon
+Mushishi
+Avatar : Le dernier maître / Monstre de l'air
+GTO
+Samuraï Shamploo
+Cowboy bebop
+Durarara
+Dororo
+Ace no diamond
+Black lagon
+Yakwsoku no neverland
+L'attaque des titans (Shinguki)
+One punch man (saison 1)
+Mob psycho 100
+Usagi Drop</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

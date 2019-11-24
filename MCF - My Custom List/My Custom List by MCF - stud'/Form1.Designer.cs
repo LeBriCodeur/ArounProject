@@ -57,6 +57,10 @@
             this.editAdditemsList = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtShowList = new System.Windows.Forms.RichTextBox();
+            this.checkEditList = new System.Windows.Forms.CheckBox();
+            this.BtnSaveEdit = new System.Windows.Forms.Button();
+            this.btnReNameCatego = new System.Windows.Forms.Button();
+            this.btnReNameList = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.counter)).BeginInit();
@@ -70,7 +74,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Location = new System.Drawing.Point(12, 478);
+            this.btnClose.Location = new System.Drawing.Point(12, 467);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(446, 43);
@@ -92,16 +96,16 @@
             // 
             this.listCatego.FormattingEnabled = true;
             this.listCatego.ItemHeight = 16;
-            this.listCatego.Location = new System.Drawing.Point(15, 41);
+            this.listCatego.Location = new System.Drawing.Point(15, 32);
             this.listCatego.Name = "listCatego";
-            this.listCatego.Size = new System.Drawing.Size(163, 84);
+            this.listCatego.Size = new System.Drawing.Size(163, 148);
             this.listCatego.TabIndex = 2;
             this.listCatego.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListCatego_MouseClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 22);
+            this.label2.Location = new System.Drawing.Point(12, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 1;
@@ -115,7 +119,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 146);
+            this.groupBox1.Size = new System.Drawing.Size(446, 191);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Panel";
@@ -124,16 +128,16 @@
             // 
             this.listMyList.FormattingEnabled = true;
             this.listMyList.ItemHeight = 16;
-            this.listMyList.Location = new System.Drawing.Point(272, 41);
+            this.listMyList.Location = new System.Drawing.Point(272, 32);
             this.listMyList.Name = "listMyList";
-            this.listMyList.Size = new System.Drawing.Size(163, 84);
+            this.listMyList.Size = new System.Drawing.Size(163, 148);
             this.listMyList.TabIndex = 2;
             this.listMyList.SelectedIndexChanged += new System.EventHandler(this.ListMyList_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(269, 22);
+            this.label1.Location = new System.Drawing.Point(269, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 1;
@@ -141,6 +145,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReNameList);
+            this.groupBox2.Controls.Add(this.btnReNameCatego);
             this.groupBox2.Controls.Add(this.btndeleteList);
             this.groupBox2.Controls.Add(this.btnDeleteCatego);
             this.groupBox2.Controls.Add(this.btnCreateList);
@@ -151,14 +157,14 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(464, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(446, 146);
+            this.groupBox2.Size = new System.Drawing.Size(446, 191);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Création";
             // 
             // btndeleteList
             // 
-            this.btndeleteList.Location = new System.Drawing.Point(273, 103);
+            this.btndeleteList.Location = new System.Drawing.Point(274, 157);
             this.btndeleteList.Name = "btndeleteList";
             this.btndeleteList.Size = new System.Drawing.Size(163, 28);
             this.btndeleteList.TabIndex = 5;
@@ -168,7 +174,7 @@
             // 
             // btnDeleteCatego
             // 
-            this.btnDeleteCatego.Location = new System.Drawing.Point(16, 104);
+            this.btnDeleteCatego.Location = new System.Drawing.Point(17, 157);
             this.btnDeleteCatego.Name = "btnDeleteCatego";
             this.btnDeleteCatego.Size = new System.Drawing.Size(163, 28);
             this.btnDeleteCatego.TabIndex = 5;
@@ -178,7 +184,7 @@
             // 
             // btnCreateList
             // 
-            this.btnCreateList.Location = new System.Drawing.Point(273, 69);
+            this.btnCreateList.Location = new System.Drawing.Point(274, 88);
             this.btnCreateList.Name = "btnCreateList";
             this.btnCreateList.Size = new System.Drawing.Size(163, 28);
             this.btnCreateList.TabIndex = 4;
@@ -188,7 +194,7 @@
             // 
             // btnCreateCatego
             // 
-            this.btnCreateCatego.Location = new System.Drawing.Point(16, 69);
+            this.btnCreateCatego.Location = new System.Drawing.Point(17, 88);
             this.btnCreateCatego.Name = "btnCreateCatego";
             this.btnCreateCatego.Size = new System.Drawing.Size(163, 28);
             this.btnCreateCatego.TabIndex = 3;
@@ -198,14 +204,14 @@
             // 
             // editNameList
             // 
-            this.editNameList.Location = new System.Drawing.Point(273, 42);
+            this.editNameList.Location = new System.Drawing.Point(273, 52);
             this.editNameList.Name = "editNameList";
             this.editNameList.Size = new System.Drawing.Size(163, 22);
             this.editNameList.TabIndex = 2;
             // 
             // editFolderName
             // 
-            this.editFolderName.Location = new System.Drawing.Point(16, 42);
+            this.editFolderName.Location = new System.Drawing.Point(16, 52);
             this.editFolderName.Name = "editFolderName";
             this.editFolderName.Size = new System.Drawing.Size(163, 22);
             this.editFolderName.TabIndex = 2;
@@ -213,7 +219,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 22);
+            this.label3.Location = new System.Drawing.Point(270, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 16);
             this.label3.TabIndex = 1;
@@ -222,7 +228,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 22);
+            this.label4.Location = new System.Drawing.Point(13, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 16);
             this.label4.TabIndex = 1;
@@ -312,18 +318,18 @@
             this.groupBox5.Controls.Add(this.btnAddItemInList);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.editAdditemsList);
-            this.groupBox5.Location = new System.Drawing.Point(464, 164);
+            this.groupBox5.Location = new System.Drawing.Point(464, 209);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(446, 155);
+            this.groupBox5.Size = new System.Drawing.Size(446, 115);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ajouter";
             // 
             // btnAddItemInList
             // 
-            this.btnAddItemInList.Location = new System.Drawing.Point(271, 96);
+            this.btnAddItemInList.Location = new System.Drawing.Point(319, 53);
             this.btnAddItemInList.Name = "btnAddItemInList";
-            this.btnAddItemInList.Size = new System.Drawing.Size(163, 53);
+            this.btnAddItemInList.Size = new System.Drawing.Size(121, 56);
             this.btnAddItemInList.TabIndex = 3;
             this.btnAddItemInList.Text = "Ajouter";
             this.btnAddItemInList.UseVisualStyleBackColor = true;
@@ -343,15 +349,17 @@
             this.editAdditemsList.Location = new System.Drawing.Point(14, 53);
             this.editAdditemsList.Multiline = true;
             this.editAdditemsList.Name = "editAdditemsList";
-            this.editAdditemsList.Size = new System.Drawing.Size(251, 96);
+            this.editAdditemsList.Size = new System.Drawing.Size(299, 56);
             this.editAdditemsList.TabIndex = 0;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.BtnSaveEdit);
+            this.groupBox6.Controls.Add(this.checkEditList);
             this.groupBox6.Controls.Add(this.txtShowList);
-            this.groupBox6.Location = new System.Drawing.Point(12, 164);
+            this.groupBox6.Location = new System.Drawing.Point(12, 209);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(446, 307);
+            this.groupBox6.Size = new System.Drawing.Size(446, 235);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Visualisation";
@@ -361,9 +369,51 @@
             this.txtShowList.Location = new System.Drawing.Point(6, 21);
             this.txtShowList.Name = "txtShowList";
             this.txtShowList.ReadOnly = true;
-            this.txtShowList.Size = new System.Drawing.Size(429, 280);
+            this.txtShowList.Size = new System.Drawing.Size(429, 182);
             this.txtShowList.TabIndex = 0;
             this.txtShowList.Text = "";
+            // 
+            // checkEditList
+            // 
+            this.checkEditList.AutoSize = true;
+            this.checkEditList.Location = new System.Drawing.Point(6, 208);
+            this.checkEditList.Name = "checkEditList";
+            this.checkEditList.Size = new System.Drawing.Size(118, 20);
+            this.checkEditList.TabIndex = 1;
+            this.checkEditList.Text = "Editer la liste";
+            this.checkEditList.UseVisualStyleBackColor = true;
+            this.checkEditList.CheckedChanged += new System.EventHandler(this.CheckEditList_CheckedChanged);
+            // 
+            // BtnSaveEdit
+            // 
+            this.BtnSaveEdit.Enabled = false;
+            this.BtnSaveEdit.Location = new System.Drawing.Point(304, 205);
+            this.BtnSaveEdit.Name = "BtnSaveEdit";
+            this.BtnSaveEdit.Size = new System.Drawing.Size(131, 24);
+            this.BtnSaveEdit.TabIndex = 2;
+            this.BtnSaveEdit.Text = "Enregistrer";
+            this.BtnSaveEdit.UseVisualStyleBackColor = true;
+            this.BtnSaveEdit.Click += new System.EventHandler(this.BtnSaveEdit_Click);
+            // 
+            // btnReNameCatego
+            // 
+            this.btnReNameCatego.Location = new System.Drawing.Point(16, 122);
+            this.btnReNameCatego.Name = "btnReNameCatego";
+            this.btnReNameCatego.Size = new System.Drawing.Size(163, 28);
+            this.btnReNameCatego.TabIndex = 6;
+            this.btnReNameCatego.Text = "Renommer catégorie";
+            this.btnReNameCatego.UseVisualStyleBackColor = true;
+            this.btnReNameCatego.Click += new System.EventHandler(this.BtnReNameCatego_Click);
+            // 
+            // btnReNameList
+            // 
+            this.btnReNameList.Location = new System.Drawing.Point(274, 122);
+            this.btnReNameList.Name = "btnReNameList";
+            this.btnReNameList.Size = new System.Drawing.Size(163, 28);
+            this.btnReNameList.TabIndex = 6;
+            this.btnReNameList.Text = "Renommer liste";
+            this.btnReNameList.UseVisualStyleBackColor = true;
+            this.btnReNameList.Click += new System.EventHandler(this.BtnReNameList_Click);
             // 
             // Form1
             // 
@@ -401,6 +451,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,6 +488,10 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.RichTextBox txtShowList;
         private System.Windows.Forms.CheckBox checkAllCatego;
+        private System.Windows.Forms.Button BtnSaveEdit;
+        private System.Windows.Forms.CheckBox checkEditList;
+        private System.Windows.Forms.Button btnReNameList;
+        private System.Windows.Forms.Button btnReNameCatego;
     }
 }
 
