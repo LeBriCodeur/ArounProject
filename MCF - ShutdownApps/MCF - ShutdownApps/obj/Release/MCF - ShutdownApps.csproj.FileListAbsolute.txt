@@ -1,0 +1,10 @@
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Release\MCF - ShutdownApps.exe
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Release\MCF - ShutdownApps.exe.config
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF - ShutdownApps.csprojAssemblyReference.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF___ShutdownApps.Form1.resources
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF___ShutdownApps.Properties.Resources.resources
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF - ShutdownApps.csproj.GenerateResource.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF - ShutdownApps.csproj.CoreCompileInputs.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF - ShutdownApps.exe
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Release\MCF - ShutdownApps.pdb
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Release\MCF - ShutdownApps.pdb

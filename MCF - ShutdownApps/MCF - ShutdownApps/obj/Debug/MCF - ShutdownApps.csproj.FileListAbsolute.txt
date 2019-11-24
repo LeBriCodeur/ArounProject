@@ -1,0 +1,10 @@
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Debug\MCF - ShutdownApps.exe.config
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Debug\MCF - ShutdownApps.exe
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\bin\Debug\MCF - ShutdownApps.pdb
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF - ShutdownApps.csprojAssemblyReference.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF___ShutdownApps.Form1.resources
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF___ShutdownApps.Properties.Resources.resources
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF - ShutdownApps.csproj.GenerateResource.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF - ShutdownApps.csproj.CoreCompileInputs.cache
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF - ShutdownApps.exe
+C:\Users\mcfam\source\repos\MCF - ShutdownApps\MCF - ShutdownApps\obj\Debug\MCF - ShutdownApps.pdb
