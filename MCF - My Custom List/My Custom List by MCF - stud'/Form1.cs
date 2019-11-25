@@ -421,6 +421,7 @@ namespace My_Custom_List_by_MCF___stud_
         {
             if (checkAllCatego.Checked)
             {
+                counter.Minimum = 1;
                 counter.Enabled = false;
             }
             else
@@ -494,6 +495,11 @@ namespace My_Custom_List_by_MCF___stud_
         private void BtnReNameList_Click(object sender, EventArgs e)
         {
             rename(1);
+        }
+
+        private void BtnOpenFolderSave_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", pathSave);
         }
     }
 }

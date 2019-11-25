@@ -25,7 +25,7 @@ namespace My_Custom_List_by_MCF___stud_.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"Liste faite par une vieille de 8ans.
+        [global::System.Configuration.DefaultSettingValueAttribute(@"Liste faite par Marie Dr en animés.
 Made in abyss'
 Gurren Lagann
 Shen Gate

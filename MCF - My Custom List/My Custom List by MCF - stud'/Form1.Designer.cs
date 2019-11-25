@@ -36,6 +36,8 @@
             this.listMyList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReNameList = new System.Windows.Forms.Button();
+            this.btnReNameCatego = new System.Windows.Forms.Button();
             this.btndeleteList = new System.Windows.Forms.Button();
             this.btnDeleteCatego = new System.Windows.Forms.Button();
             this.btnCreateList = new System.Windows.Forms.Button();
@@ -56,11 +58,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.editAdditemsList = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtShowList = new System.Windows.Forms.RichTextBox();
-            this.checkEditList = new System.Windows.Forms.CheckBox();
             this.BtnSaveEdit = new System.Windows.Forms.Button();
-            this.btnReNameCatego = new System.Windows.Forms.Button();
-            this.btnReNameList = new System.Windows.Forms.Button();
+            this.checkEditList = new System.Windows.Forms.CheckBox();
+            this.txtShowList = new System.Windows.Forms.RichTextBox();
+            this.btnOpenFolderSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.counter)).BeginInit();
@@ -74,10 +75,10 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.SteelBlue;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Location = new System.Drawing.Point(12, 467);
+            this.btnClose.Location = new System.Drawing.Point(18, 498);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(446, 43);
+            this.btnClose.Size = new System.Drawing.Size(206, 43);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "fermer";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -161,6 +162,26 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Création";
+            // 
+            // btnReNameList
+            // 
+            this.btnReNameList.Location = new System.Drawing.Point(274, 122);
+            this.btnReNameList.Name = "btnReNameList";
+            this.btnReNameList.Size = new System.Drawing.Size(163, 28);
+            this.btnReNameList.TabIndex = 6;
+            this.btnReNameList.Text = "Renommer liste";
+            this.btnReNameList.UseVisualStyleBackColor = true;
+            this.btnReNameList.Click += new System.EventHandler(this.BtnReNameList_Click);
+            // 
+            // btnReNameCatego
+            // 
+            this.btnReNameCatego.Location = new System.Drawing.Point(16, 122);
+            this.btnReNameCatego.Name = "btnReNameCatego";
+            this.btnReNameCatego.Size = new System.Drawing.Size(163, 28);
+            this.btnReNameCatego.TabIndex = 6;
+            this.btnReNameCatego.Text = "Renommer catégorie";
+            this.btnReNameCatego.UseVisualStyleBackColor = true;
+            this.btnReNameCatego.Click += new System.EventHandler(this.BtnReNameCatego_Click);
             // 
             // btndeleteList
             // 
@@ -364,14 +385,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Visualisation";
             // 
-            // txtShowList
+            // BtnSaveEdit
             // 
-            this.txtShowList.Location = new System.Drawing.Point(6, 21);
-            this.txtShowList.Name = "txtShowList";
-            this.txtShowList.ReadOnly = true;
-            this.txtShowList.Size = new System.Drawing.Size(429, 182);
-            this.txtShowList.TabIndex = 0;
-            this.txtShowList.Text = "";
+            this.BtnSaveEdit.Enabled = false;
+            this.BtnSaveEdit.Location = new System.Drawing.Point(304, 205);
+            this.BtnSaveEdit.Name = "BtnSaveEdit";
+            this.BtnSaveEdit.Size = new System.Drawing.Size(131, 24);
+            this.BtnSaveEdit.TabIndex = 2;
+            this.BtnSaveEdit.Text = "Enregistrer";
+            this.BtnSaveEdit.UseVisualStyleBackColor = true;
+            this.BtnSaveEdit.Click += new System.EventHandler(this.BtnSaveEdit_Click);
             // 
             // checkEditList
             // 
@@ -384,36 +407,26 @@
             this.checkEditList.UseVisualStyleBackColor = true;
             this.checkEditList.CheckedChanged += new System.EventHandler(this.CheckEditList_CheckedChanged);
             // 
-            // BtnSaveEdit
+            // txtShowList
             // 
-            this.BtnSaveEdit.Enabled = false;
-            this.BtnSaveEdit.Location = new System.Drawing.Point(304, 205);
-            this.BtnSaveEdit.Name = "BtnSaveEdit";
-            this.BtnSaveEdit.Size = new System.Drawing.Size(131, 24);
-            this.BtnSaveEdit.TabIndex = 2;
-            this.BtnSaveEdit.Text = "Enregistrer";
-            this.BtnSaveEdit.UseVisualStyleBackColor = true;
-            this.BtnSaveEdit.Click += new System.EventHandler(this.BtnSaveEdit_Click);
+            this.txtShowList.Location = new System.Drawing.Point(6, 21);
+            this.txtShowList.Name = "txtShowList";
+            this.txtShowList.ReadOnly = true;
+            this.txtShowList.Size = new System.Drawing.Size(429, 182);
+            this.txtShowList.TabIndex = 0;
+            this.txtShowList.Text = "";
             // 
-            // btnReNameCatego
+            // btnOpenFolderSave
             // 
-            this.btnReNameCatego.Location = new System.Drawing.Point(16, 122);
-            this.btnReNameCatego.Name = "btnReNameCatego";
-            this.btnReNameCatego.Size = new System.Drawing.Size(163, 28);
-            this.btnReNameCatego.TabIndex = 6;
-            this.btnReNameCatego.Text = "Renommer catégorie";
-            this.btnReNameCatego.UseVisualStyleBackColor = true;
-            this.btnReNameCatego.Click += new System.EventHandler(this.BtnReNameCatego_Click);
-            // 
-            // btnReNameList
-            // 
-            this.btnReNameList.Location = new System.Drawing.Point(274, 122);
-            this.btnReNameList.Name = "btnReNameList";
-            this.btnReNameList.Size = new System.Drawing.Size(163, 28);
-            this.btnReNameList.TabIndex = 6;
-            this.btnReNameList.Text = "Renommer liste";
-            this.btnReNameList.UseVisualStyleBackColor = true;
-            this.btnReNameList.Click += new System.EventHandler(this.BtnReNameList_Click);
+            this.btnOpenFolderSave.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnOpenFolderSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOpenFolderSave.Location = new System.Drawing.Point(18, 450);
+            this.btnOpenFolderSave.Name = "btnOpenFolderSave";
+            this.btnOpenFolderSave.Size = new System.Drawing.Size(206, 43);
+            this.btnOpenFolderSave.TabIndex = 11;
+            this.btnOpenFolderSave.Text = "Ouvrir le dossier de sauvegarde";
+            this.btnOpenFolderSave.UseVisualStyleBackColor = false;
+            this.btnOpenFolderSave.Click += new System.EventHandler(this.BtnOpenFolderSave_Click);
             // 
             // Form1
             // 
@@ -422,6 +435,7 @@
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(922, 545);
             this.ControlBox = false;
+            this.Controls.Add(this.btnOpenFolderSave);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label6);
@@ -492,6 +506,7 @@
         private System.Windows.Forms.CheckBox checkEditList;
         private System.Windows.Forms.Button btnReNameList;
         private System.Windows.Forms.Button btnReNameCatego;
+        private System.Windows.Forms.Button btnOpenFolderSave;
     }
 }
 

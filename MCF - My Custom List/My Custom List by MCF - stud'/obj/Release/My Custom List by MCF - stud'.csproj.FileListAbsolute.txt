@@ -7,3 +7,4 @@ C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - s
 C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Release\My Custom List by MCF - stud'.csproj.CoreCompileInputs.cache
 C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Release\[MCF - stud'] My Custom List.exe
 C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Release\[MCF - stud'] My Custom List.pdb
+C:\Users\mcfam\Desktop\DevWinApps\MCF - My Custom List\My Custom List by MCF - stud'\obj\Release\My Custom List by MCF - stud'.csprojAssemblyReference.cache
